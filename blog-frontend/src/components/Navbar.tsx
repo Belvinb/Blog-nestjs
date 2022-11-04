@@ -12,6 +12,7 @@ function Navbar() {
           {user && user.picture && <img src={user.picture} alt="My Avatar" />}
           {!user && (
             <img
+           
               src={
                 "https://res.cloudinary.com/yemiwebby-com-ng/image/upload/v1513770253/WEB_FREAK_50PX-01_yaqxg7.png"
               }
