@@ -8,7 +8,7 @@ function Post() {
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       const response = await fetch(
-        `${process.env.REACT_APP_SERVER_BASER_URL}/blog/post/${postId}`
+        `/blog/post/${postId}`
       );
       const json = await response.json();
       setPost(json);

@@ -10,7 +10,7 @@ function Home(): JSX.Element {
   const deletePost = async (id: string) => {
     const accessToken = await getIdTokenClaims();
     await fetch(
-      `${process.env.REACT_APP_SERVER_BASE_URL}/blog/delete?postID=${id}`,
+      `/blog/delete?postID=${id}`,
       {
         method: "delete",
         headers: new Headers({

@@ -46,7 +46,7 @@ function Create(): JSX.Element {
     try {
       const accessToken = await getIdTokenClaims();
       const response = await fetch(
-        `${process.env.REACT_APP_SERVER_BASE_URL}/blog/post`,
+        `/blog/post`,
         {
           method: "post",
           headers: new Headers({

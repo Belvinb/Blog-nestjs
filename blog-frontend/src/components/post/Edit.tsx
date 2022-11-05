@@ -20,7 +20,7 @@ function Edit(): JSX.Element {
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       const response = await fetch(
-        `${process.env.REACT_APP_SERVER_BASE_URL}/blog/post/${postId}`
+        `/blog/post/${postId}`
       );
       const json = await response.json();
       setPost(json);
@@ -45,7 +45,7 @@ function Edit(): JSX.Element {
     try {
       const accessToken = await getIdTokenClaims();
       const response = await fetch(
-        `${process.env.REACT_APP_SERVER_BASE_URL}/blog/edit?postID=${postId}`,
+        `/blog/edit?postID=${postId}`,
         {
           method: "put",
           headers: new Headers({
