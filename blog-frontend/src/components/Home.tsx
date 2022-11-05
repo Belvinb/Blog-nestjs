@@ -32,7 +32,7 @@ function Home(): JSX.Element {
   useEffect(() => {
     const fetchPosts = async (): Promise<any> => {
       const response = await fetch(
-        `${process.env.REACT_APP_SERVER_BASE_URL}/blog/posts`
+        `/blog/posts`
       );
       const json = await response.json();
       setPosts(json);
